@@ -16,7 +16,11 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+<<<<<<< Updated upstream
       <h1>sisa + sisa</h1>
+=======
+      <h1>jhon + jhon</h1>
+>>>>>>> Stashed changes
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
