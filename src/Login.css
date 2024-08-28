@@ -13,7 +13,7 @@ body, html {
   max-width: auto;
   padding: 20px;
   background-color: #f7f7f7;
-  border-radius: 50px;
+  border-radius: 20px;
   box-shadow: 0 5px 10px rgba(3, 3, 3, 0.336);
   text-align: center;
 }
