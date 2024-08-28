@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import app from './firebaseConfig';
 import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const [modalMessage, setModalMessage] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -27,23 +27,24 @@ function Login() {
         // Inicio de sesión exitoso
         setModalMessage('Inicio de sesión exitoso');
         setIsModalOpen(true);
+        setTimeout(() => navigate('/world'), 1000);
       })
       .catch((error) => {
         if (error.code) {
           // Si el usuario no existe, registrarlo
           createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-              // Registro e inicio de sesión exitosos
               setModalMessage('Registro e inicio de sesión exitosos');
               setIsModalOpen(true);
+              setTimeout(() => navigate('/world'), 1000);
             })
             .catch((error) => {
-              // Manejo de errores de registro
+          // Manejo de errores de registro
               setModalMessage(`Error al registrar: ${error.message}`);
               setIsModalOpen(true);
             });
         } else {
-          // Manejo de otros errores de inicio de sesión
+          
           setModalMessage(`Error al iniciar sesión: ${error.message}`);
           setIsModalOpen(true);
         }
