@@ -1,6 +1,8 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas} from "@react-three/fiber";
 import { FirstPersonControls } from "@react-three/drei";
 import House from "./House";
+import WaterDrop from "./WaterDrop";
+
 
 const World = () => {
     return (
