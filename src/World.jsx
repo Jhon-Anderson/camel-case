@@ -17,7 +17,7 @@ const World = () => {
 
             <ambientLight intensity={4} />
             <directionalLight position={[0, 10, 10]} />
-
+            <House />
             <WaterDrop />
         </Canvas>
     );

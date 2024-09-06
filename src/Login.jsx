@@ -39,12 +39,11 @@ function Login() {
               setTimeout(() => navigate('/World'), 1000);
             })
             .catch((error) => {
-          // Manejo de errores de registro
+              // Manejo de errores de registro
               setModalMessage(`Error al registrar: ${error.message}`);
               setIsModalOpen(true);
             });
         } else {
-          
           setModalMessage(`Error al iniciar sesión: ${error.message}`);
           setIsModalOpen(true);
         }
@@ -53,6 +52,9 @@ function Login() {
 
   return (
     <div className="login-container">
+      <div className="logo-container">
+        <img src="/LogoTerraNova.png" alt="Logo TerraNova" />
+      </div>
       <h2>Iniciar Sesión</h2>
       <form onSubmit={handleLogin}>
         <div>
