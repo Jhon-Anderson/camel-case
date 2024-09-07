@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@react-three/drei": "^9.112.0",
     "@react-three/fiber": "^8.17.6",
     "firebase": "^10.13.1",
@@ -17,6 +18,16 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
     "use-sound": "^4.0.3"
+=======
+    "@react-three/drei": "^9.111.3",
+    "@react-three/fiber": "^8.17.6",
+    "@types/three": "^0.167.2",
+    "firebase": "^10.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
+    "three": "^0.167.1"
+>>>>>>> jbaa
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
